@@ -1,4 +1,4 @@
-# Pico 8 Game for GMTK 2022 Jam on itch
+# Pico 8 Template for game james
 
 To run the project using VS Code: launch.json has everything setup so you can just click on RUN/Startdebugging in VS code to get pico8 running your card.
 
