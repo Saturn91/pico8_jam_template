@@ -6,12 +6,11 @@ To run the project using VS Code: launch.json has everything setup so you can ju
 To allow users to remap the default pico8 keys do the following:
 
 1. build the web version within pico: ```export index.html```
-2. in the index.html file replace the bottom section with the following magic code:
+2. get the files from the [pico8 local folder](C:\Users\manue\AppData\Roaming\pico-8\carts)
+2. in the index.html file replace the bottom section bellow ```<!-- Add content below the cart here -->``` with the following magic code:
 ```
 <!-- allow remaping of player controls -->
-<div style="display: flex; justify-content: center;margin-top: 50px;">
-	<button onclick="nfig_toggle()" style="width: 100%; height: 50px; background-color: rgb(18, 133, 14); border: none; color: white; font-size: 20px; cursor: pointer;">remap controls</button>
-</div>
+<button onclick="nfig_toggle()" style="width: 200px; height: 50px; background-color: rgb(255, 153, 0); border: none; color: white; font-size: 20px; cursor: pointer;">remap controls</button>
 
 </div> <!-- body_0 -->
 </body></html>
