@@ -2,6 +2,22 @@
 
 To run the project using VS Code: launch.json has everything setup so you can just click on RUN/Startdebugging in VS code to get pico8 running your card.
 
+# Remapping Pico 8 controls in the web build
+To allow users to remap the default pico8 keys do the following:
+
+1. build the web version within pico: ```export index.html```
+2. in the index.html file replace the bottom section with the following magic code:
+```
+<!-- allow remaping of player controls -->
+<div style="display: flex; justify-content: center;margin-top: 50px;">
+	<button onclick="nfig_toggle()" style="width: 100%; height: 50px; background-color: rgb(18, 133, 14); border: none; color: white; font-size: 20px; cursor: pointer;">remap controls</button>
+</div>
+
+</div> <!-- body_0 -->
+</body></html>
+<script src="https://cdn.jsdelivr.net/gh/codl/pico-nfig@1.0.1/lib/nfig.js" integrity="sha256-g5hO7r4Wj0Z51eaV73ATXK3yLGl7hqB30UN986DuCO0=" crossorigin="anonymous"></script>
+```
+
 # Lua Test Frame work
 
 The Lua test framework is not able to run function within a .p8 file, you have to copy them into the tested_code.lua file and test then (and eventually move it back into your .p8 file once it works as expected... keep uptodate!)
