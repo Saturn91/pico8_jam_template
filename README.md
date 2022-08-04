@@ -3,18 +3,20 @@
 To run the project using VS Code: launch.json has everything setup so you can just click on RUN/Startdebugging in VS code to get pico8 running your card.
 
 # Remapping Pico 8 controls in the web build
+[source](https://github.com/codl/pico-nfig)
 To allow users to remap the default pico8 keys do the following:
 
 1. build the web version within pico: ```export index.html```
 2. get the files from the [pico8 local folder](C:\Users\manue\AppData\Roaming\pico-8\carts)
-2. in the index.html file replace the bottom section bellow ```<!-- Add content below the cart here -->``` with the following magic code:
+3. copy the nfig.js from this repo, or download it [here](https://github.com/codl/pico-nfig/blob/master/lib/nfig.js) and paste it aside the index.html and the index.js
+4. in the index.html file replace the bottom section bellow ```<!-- Add content below the cart here -->``` with the following magic code:
 ```html
 <!-- allow remaping of player controls -->
-<button onclick="nfig_toggle()" style="width: 200px; height: 50px; background-color: rgb(255, 153, 0); border: none; color: white; font-size: 20px; cursor: pointer; margin-top: -25px;">remap controls</button>
+<button onclick="nfig_toggle()" style="width: 200px; height: 50px; background-color: rgb(255, 153, 0); border: none; color: white; font-size: 20px; cursor: pointer;">remap controls</button>
 
 </div> <!-- body_0 -->
 </body></html>
-<script src="https://cdn.jsdelivr.net/gh/codl/pico-nfig@1.0.1/lib/nfig.js" integrity="sha256-g5hO7r4Wj0Z51eaV73ATXK3yLGl7hqB30UN986DuCO0=" crossorigin="anonymous"></script>
+<script src="./nfig.js" type='text/javascript'></script>
 ```
 
 # Lua Test Frame work
