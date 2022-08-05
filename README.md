@@ -64,8 +64,12 @@ webbuild
 8. upload to itch.io
 
 # Lua Test Frame work
+## Before you use
+1. You can only test general Lua code and no pico8 specific functions like rect, spr and so on...
+2. You will have to copy functions from the .p8 file into the test/tested_code.lua file in order to test them... - and if you do test driven development - copy them back after doing some adjustments... 
+4. I know this is tedious! Maybe I find a better solution in the future, I am open for suggestions!
 
-The Lua test framework is not able to run function within a .p8 file, you have to copy them into the tested_code.lua file and test then (and eventually move it back into your .p8 file once it works as expected... keep it uptodate!)
+## Setup a Test
 
 1. Edit the test in test/test.lua and test/tested_code.lua
 
